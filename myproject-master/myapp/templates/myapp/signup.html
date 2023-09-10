@@ -1,0 +1,102 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<!-- Section: Design Block -->
+<section class="">
+    <!-- Jumbotron -->
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 ls-tight">
+              The Best offer <br />
+              <span class="text-primary">For your <br>Journey</span>
+            </h1>
+            <p style="color: hsl(217, 10%, 50.8%)">
+              Hello guys, we are hear to enhance your journey by providing online bus ticket booking system. so for your comfortness please sign in here.!!
+            </p>
+          </div>
+  
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+              <div class="card-body py-5 px-md-5">
+                <form action="{% url 'signup' %}" method="post">
+                    {% csrf_token %}
+
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                  {% comment %} <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1" class="form-control" />
+                        <label class="form-label" for="form3Example1">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example2" class="form-control" />
+                        <label class="form-label" for="form3Example2">Last name</label>
+                      </div>
+                    </div>
+                  </div> {% endcomment %}
+  
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="example-email-input"></label>
+                    <input type="email" class="form-control" name = "email" id="example-email-input" placeholder="Email"/>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="example-username-input" class="col-2 col-form-label"></label>
+                    <div class="col-12" >
+                        <input name='name' class="form-control" type="text" required placeholder="username">
+                    </div>
+                </div>
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" name = "password" id="example-email-input" class="form-control" required placeholder="Password"/>
+                    <label class="form-label" for="example-email-input"></label>
+                  </div>
+  
+                  <!-- Checkbox -->
+                  {% comment %} <div class="form-check d-flex justify-content-center mb-4">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                    <label class="form-check-label" for="form2Example33">
+                      Subscribe to our newsletter
+                    </label>
+                  </div> {% endcomment %}
+  
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Sign up
+                </button>
+  
+                  <!-- Register buttons -->
+                  {% comment %} <div class="text-center">
+                    <p>or sign up with:</p> {% endcomment %}
+                    {% comment %} <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </button>
+  
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-github"></i>
+                    </button> {% endcomment %}
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+
+{% endblock %}
